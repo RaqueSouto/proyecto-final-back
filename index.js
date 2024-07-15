@@ -23,7 +23,8 @@ servidor.get("/contactos", async (peticion, respuesta) => {
         respuesta.json(resultado);
     } catch (error) {
         respuesta.status(500);
-        respuesta.json(error); // Enviar respuesta de error en caso de fallo
+        // Enviar respuesta de error en caso de fallo
+        respuesta.json(error); 
     }
 });
 
@@ -45,7 +46,8 @@ servidor.post("/contactos/nuevo", async (peticion, respuesta) => {
         respuesta.json({ id });
     } catch (error) {
         respuesta.status(500);
-        respuesta.json(error); // Enviar respuesta de error en caso de fallo
+        // Enviar respuesta de error en caso de fallo
+        respuesta.json(error); 
     }
 });
 
@@ -65,7 +67,8 @@ servidor.put("/contactos/actualizar/:id([0-9a-f]{24})/:operacion(1|2)", async (p
         respuesta.json({ resultado: count ? "aceptada" : "rechazada" });
     } catch (error) {
         respuesta.status(500);
-        respuesta.json(error); // Enviar respuesta de error en caso de fallo
+        // Enviar respuesta de error en caso de fallo
+        respuesta.json(error); 
     }
 });
 
@@ -76,7 +79,8 @@ servidor.delete("/contactos/borrar/:id([0-9a-f]{24})", async (peticion, respuest
         respuesta.json({ resultado: count ? "aceptada" : "rechazada" });
     } catch (error) {
         respuesta.status(500);
-        respuesta.json(error); // Enviar respuesta de error en caso de fallo
+        // Enviar respuesta de error en caso de fallo
+        respuesta.json(error); 
     }
 });
 
